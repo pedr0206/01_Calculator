@@ -22,8 +22,8 @@ namespace _01_Calculator
         public void Sum()
         {
             //Arrange
-            int[] numbers = new int[2];
-            Assert.AreEqual(0, Calculator.Sum(numbers));
+            int[] numbers = new int[15];
+          //  Assert.AreEqual(0, Calculator.Sum(numbers));
 
             numbers[0] = 7;
             Assert.AreEqual(7, Calculator.Sum(numbers));
@@ -32,20 +32,43 @@ namespace _01_Calculator
             numbers[1] = 11;
             Assert.AreEqual(18, Calculator.Sum(numbers));
 
+            numbers[0] = 7;
+            numbers[1] = 11;
+            numbers[2] = 10;
+            Assert.AreEqual(28, Calculator.Sum(numbers));
+
+            numbers[0] = 7;
+            numbers[1] = 11;
+            numbers[2] = 10;
+            numbers[3] = 7;
+            numbers[4] = 11;
+            numbers[5] = 10;
+            numbers[6] = 7;
+            numbers[7] = 11;
+            numbers[8] = 10;
+            numbers[9] = 7;
+            numbers[10] = 11;
+            numbers[11] = 10;
+            numbers[12] = 7;
+            numbers[13] = 11;
+            numbers[14] = 10;
+            Assert.AreEqual(140, Calculator.Sum(numbers));
+
         }
         [TestMethod]
         public void Multiply()
         {
             //It multiplies two numbers
             //It multiplies several numbers
-            Assert.AreEqual(0, Calculator.Multiply(0,0);
-            Assert.AreEqual(0, Calculator.Multyply(2, 0);
+            Assert.AreEqual(0, Calculator.Multiply(0,0));
+            Assert.AreEqual(0, Calculator.Multiply(2, 0));
         }
         [TestMethod]
         public void Power()
         {
             //It raises one number to the power of another number
-            Assert.AreEqual(0, Calculator.Power(0, 2);
+            Assert.AreEqual(0, Calculator.Power(0, 2));
+            Assert.AreEqual(16, Calculator.Power(4, 2));
         }
         [TestMethod]
         public void Factorial()
